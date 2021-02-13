@@ -7,6 +7,7 @@ namespace Final_project_5._6
         static void Main(string[] args)
         {
 
+
             Console.ReadKey();
         }
         static (string Name, string Lastname, int Aage) EnterUser() // ФИО В, Кортеж

@@ -6,11 +6,10 @@ namespace Final_project_5._6
     {
         static void Main(string[] args)
         {
-
-
+            GetCortej();
             Console.ReadKey();
         }
-        static (string Name, string Lastname, int Aage) EnterUser() // ФИО В, Кортеж
+        static (string Name, string Lastname, int Age) EnterUser() // ФИО В, Кортеж
         {
             (string Name, string Lastname, int Age) User;
 
@@ -18,7 +17,7 @@ namespace Final_project_5._6
             User.Name = Console.ReadLine();
             Console.Write("Введите фамилию ");
             User.Lastname = Console.ReadLine();
-
+            Console.Write("Введите возрост ");
             int protAge = CheckName();
             int agenum = 0;
             if (protAge > 0)
@@ -64,59 +63,55 @@ namespace Final_project_5._6
         }
         static string[] ShowColor()//ЦВЕТА, их выбор мас строк
         {
+            Console.Write("сколько у вас любимых цветов ");
             int numColor = CheckName();
             string[] arrColor = new string[numColor];
 
             for (int i = 0; i < arrColor.Length; i++)
             {
-                Console.WriteLine("введите {0}-й любимый цвет ", i + 1);
+                Console.Write("введите {0}-й любимый цвет на русском с маленькой буквы:", i + 1);
                 string color = Console.ReadLine();
                 switch (color)
                 {
-                    case "red":
+                    case "красный":
                         Console.BackgroundColor = ConsoleColor.Red;
                         Console.ForegroundColor = ConsoleColor.Black;
-                        Console.WriteLine("Your color is {0}!", color);
+                        //Console.WriteLine("Your color is {0}!", color);
                         break;
-                    case "green":
+                    case "зеленый":
                         Console.BackgroundColor = ConsoleColor.Green;
                         Console.ForegroundColor = ConsoleColor.Black;
-                        Console.WriteLine("Your color is {0}!", color);
+                        //Console.WriteLine("Your color is {0}!", color);
                         break;
-                    case "blue":
+                    case "синий":
                         Console.BackgroundColor = ConsoleColor.Blue;
                         Console.ForegroundColor = ConsoleColor.Black;
-                        Console.WriteLine("Your color is {0}!", color);
+                        //Console.WriteLine("Your color is {0}!", color);
                         break;
-                    case "cyan":
+                    case "голубой ":
                         Console.BackgroundColor = ConsoleColor.Cyan;
                         Console.ForegroundColor = ConsoleColor.Black;
-                        Console.WriteLine("Your color is {0}!", color);
+                        //Console.WriteLine("Your color is {0}!", color);
                         break;
-                    case "yellow":
+                    case "желтый":
                         Console.BackgroundColor = ConsoleColor.Yellow;
                         Console.ForegroundColor = ConsoleColor.Black;
-                        Console.WriteLine("Your color is {0}!", color);
+                        //Console.WriteLine("Your color is {0}!", color);
                         break;
-                    case "magenta":
+                    case "пурпурный":
                         Console.BackgroundColor = ConsoleColor.Magenta;
                         Console.ForegroundColor = ConsoleColor.Black;
-                        Console.WriteLine("Your color is {0}!", color);
+                        //Console.WriteLine("Your color is {0}!", color);
                         break;
-                    case "white":
+                    case "белый":
                         Console.BackgroundColor = ConsoleColor.White;
                         Console.ForegroundColor = ConsoleColor.Black;
-                        Console.WriteLine("Your color is {0}!", color);
+                        //Console.WriteLine("Your color is {0}!", color);
                         break;
-                    case "gray":
+                    case "сервй":
                         Console.BackgroundColor = ConsoleColor.Gray;
                         Console.ForegroundColor = ConsoleColor.Black;
-                        Console.WriteLine("Your color is {0}!", color);
-                        break;
-                    default:
-                        Console.BackgroundColor = ConsoleColor.Black;
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("Your color is black!");
+                        //Console.WriteLine("Your color is {0}!", color);
                         break;
                 }
                 arrColor[i] = color;
@@ -144,6 +139,21 @@ namespace Final_project_5._6
                 }
             }
             return b;
+        }
+        static void GetCortej()
+        {
+            var setUs = EnterUser();
+            var dataCortej = (pat: NumPat(), color: ShowColor());
+            Console.WriteLine("Ваше имя {0} \nВаша фамилия {1} \nВаш возрост {2}",setUs.Name, setUs.Lastname, setUs.Age);
+            foreach (string p in dataCortej.pat)
+            {
+                Console.WriteLine(p);
+            }
+            Console.WriteLine("Любимый цвет");
+            foreach (string p in dataCortej.color)
+            {
+                Console.WriteLine(p);
+            }
         }
     }
 }

@@ -6,6 +6,7 @@ namespace Final_project_5._6
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("вводите с маленькой буквы на русской раскладке");
             GetCortej();
             Console.ReadKey();
         }
@@ -144,12 +145,13 @@ namespace Final_project_5._6
         {
             var setUs = EnterUser();
             var dataCortej = (pat: NumPat(), color: ShowColor());
-            Console.WriteLine("Ваше имя {0} \nВаша фамилия {1} \nВаш возрост {2}",setUs.Name, setUs.Lastname, setUs.Age);
+            Console.WriteLine("Ваше имя: {0} \nВаша фамилия: {1} \nВаш возрост: {2}",setUs.Name, setUs.Lastname, setUs.Age);
+            Console.WriteLine("Ваши домашние животные: ");
             foreach (string p in dataCortej.pat)
             {
                 Console.WriteLine(p);
             }
-            Console.WriteLine("Любимый цвет");
+            Console.WriteLine("Любимые цвета:");
             foreach (string p in dataCortej.color)
             {
                 Console.WriteLine(p);

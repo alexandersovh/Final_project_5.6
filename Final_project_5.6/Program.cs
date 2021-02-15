@@ -77,42 +77,34 @@ namespace Final_project_5._6
                     case "красный":
                         Console.BackgroundColor = ConsoleColor.Red;
                         Console.ForegroundColor = ConsoleColor.Black;
-                        //Console.WriteLine("Your color is {0}!", color);
                         break;
                     case "зеленый":
                         Console.BackgroundColor = ConsoleColor.Green;
                         Console.ForegroundColor = ConsoleColor.Black;
-                        //Console.WriteLine("Your color is {0}!", color);
                         break;
                     case "синий":
                         Console.BackgroundColor = ConsoleColor.Blue;
                         Console.ForegroundColor = ConsoleColor.Black;
-                        //Console.WriteLine("Your color is {0}!", color);
                         break;
                     case "голубой ":
                         Console.BackgroundColor = ConsoleColor.Cyan;
                         Console.ForegroundColor = ConsoleColor.Black;
-                        //Console.WriteLine("Your color is {0}!", color);
                         break;
                     case "желтый":
                         Console.BackgroundColor = ConsoleColor.Yellow;
                         Console.ForegroundColor = ConsoleColor.Black;
-                        //Console.WriteLine("Your color is {0}!", color);
                         break;
                     case "пурпурный":
                         Console.BackgroundColor = ConsoleColor.Magenta;
                         Console.ForegroundColor = ConsoleColor.Black;
-                        //Console.WriteLine("Your color is {0}!", color);
                         break;
                     case "белый":
                         Console.BackgroundColor = ConsoleColor.White;
                         Console.ForegroundColor = ConsoleColor.Black;
-                        //Console.WriteLine("Your color is {0}!", color);
                         break;
                     case "сервй":
                         Console.BackgroundColor = ConsoleColor.Gray;
                         Console.ForegroundColor = ConsoleColor.Black;
-                        //Console.WriteLine("Your color is {0}!", color);
                         break;
                 }
                 arrColor[i] = color;

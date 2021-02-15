@@ -10,7 +10,11 @@ namespace Final_project_5._6
             GetCortej();
             Console.ReadKey();
         }
-        static (string Name, string Lastname, int Age) EnterUser() // ФИО В, Кортеж
+        /// <summary>
+        /// ФИО В, Кортеж
+        /// </summary>
+        /// <returns></returns>
+        static (string Name, string Lastname, int Age) EnterUser()
         {
             (string Name, string Lastname, int Age) User;
 
@@ -33,7 +37,11 @@ namespace Final_project_5._6
             return User;
 
         }
-        static string[] NumPat()//ЗВЕРЬКИ мас строк
+        /// <summary>
+        /// ЗВЕРЬКИ мас строк
+        /// </summary>
+        /// <returns></returns>
+        static string[] NumPat()
         {
             Console.WriteLine("Есть ли у вас домашние животные");
 
@@ -48,10 +56,10 @@ namespace Final_project_5._6
                 Console.WriteLine("Сколько у вас домашние животныые");
                 lol = CheckName();
                 pat = new string[lol];
-                for (int i = 0; i < lol; i++)
+                for (int i = 1; i <= lol; i++)
                 {
-                    Console.WriteLine("введите клички {0}-го животных", i + 1);
-                    Console.Write(i + 1 + " ");
+                    Console.WriteLine("введите клички {0}-го животных", i);
+
                     string patName = Console.ReadLine();
                     pat[i] = patName;
                 }
@@ -62,7 +70,11 @@ namespace Final_project_5._6
             }
             return pat;
         }
-        static string[] ShowColor()//ЦВЕТА, их выбор мас строк
+        /// <summary>
+        /// ЦВЕТА, их выбор мас строк
+        /// </summary>
+        /// <returns></returns>
+        static string[] ShowColor()
         {
             Console.Write("сколько у вас любимых цветов ");
             int numColor = CheckName();
@@ -111,7 +123,11 @@ namespace Final_project_5._6
             }
             return arrColor;
         }
-        static int CheckName()//ПРОВЕРКА правельности ввода числа
+        /// <summary>
+        /// ПРОВЕРКА правельности ввода числа
+        /// </summary>
+        /// <returns></returns>
+        static int CheckName()
         {
 
             int b = 0;
